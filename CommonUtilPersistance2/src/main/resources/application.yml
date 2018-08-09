@@ -1,0 +1,27 @@
+server:
+  port: 8090
+
+
+
+spring:
+  application:
+    name: CommonUtilPersistance
+  jpa:
+    generate-ddl: true
+  profiles: 
+    active: test
+
+---
+spring:
+  profiles: local
+  mongodb:
+      host: localhost
+      databaseName: local
+      port: 27017
+
+
+
+
+---
+spring:
+  profiles: test
